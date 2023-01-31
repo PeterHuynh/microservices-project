@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project is about containerize a python AI application and run it on docker and kubernetes. The project is also setup to run code linting via CircleCI cloud managed CI/CD service
+This project is about containerize a python AI/ML application and run it on docker and kubernetes. The project is also setup to run code linting via CircleCI cloud managed CI/CD service
 
 ---
 
@@ -27,10 +27,26 @@ source .devops/bin/activate
 
 ### Kubernetes Steps
 
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create the app in Container
-* Run via kubectl
+* Setup and Configure Docker locally on ubuntu 20.04
+    
+    sudo apt install docker-ce
+
+* Setup and Configure Kubernetes locally on ubuntu 20.04 machine
+ 
+    Instruction link: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+    1. download kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+
+    2. install kubectl
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
+* Create the app in Container - please refer to run_docker.sh script for more details
+
+    docker run -it -p 8000:80 peterhuynh99/microservices:v1.0.1
+
+* Run via kubectl - please refer to run_kubernetes.sh script for more details
+
+    kubectl run deployment_name --image=dockerpath --port=80 --labels app=app_name
 
 ### Test the app:
 * run the script ./make_prediction.sh
