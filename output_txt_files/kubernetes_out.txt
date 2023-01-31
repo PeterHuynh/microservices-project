@@ -1,1 +1,18 @@
 <paste log output from Kubernetes-mediated prediction, here>
+image path: peterhuynh99/microservices:v1.0.0
+pod/microservice-project-app created
+NAME                          READY   STATUS              RESTARTS      AGE
+flasks-app-597c4fbcff-6q8kj   1/1     Running             1 (37h ago)   37h
+hello-node-67949d9db-rsfmn    1/1     Running             2 (37h ago)   2d11h
+microservice-project-app      0/1     ContainerCreating   0             1s
+pod name: microservice-project-app
+Forwarding port...
+NAME                          READY   STATUS    RESTARTS      AGE
+flasks-app-597c4fbcff-6q8kj   1/1     Running   1 (37h ago)   37h
+hello-node-67949d9db-rsfmn    1/1     Running   2 (37h ago)   2d11h
+microservice-project-app      1/1     Running   0             61s
+Forwarding from 0.0.0.0:8000 -> 80
+Handling connection for 8000
+Handling connection for 8000
+Handling connection for 8000
+
