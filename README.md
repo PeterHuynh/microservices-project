@@ -2,9 +2,7 @@
 
 ## Project Overview
 
-In this project, you will apply the skills you have acquired in this course to operationalize a Machine Learning Microservice API. 
-
-This project is about containerize an python application and run it on docker and kubernetes. The project is also setup to run code linting via CircleCI cloud managed CI/CD service
+This project is about containerize a python AI application and run it on docker and kubernetes. The project is also setup to run code linting via CircleCI cloud managed CI/CD service
 
 ---
 
