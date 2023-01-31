@@ -3,10 +3,12 @@ from flask.logging import create_logger
 import logging
 
 import pandas as pd
-import joblib
-import sklearn.ensemble
+# import joblib
+# import sklearn.ensemble
 from sklearn.preprocessing import StandardScaler
-from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.externals import joblib
+# from sklearn.ensemble import GradientBoostingClassifier
+
 
 app = Flask(__name__)
 LOG = create_logger(app)
