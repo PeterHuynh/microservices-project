@@ -48,6 +48,18 @@ sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 
     kubectl run deployment_name --image=dockerpath --port=80 --labels app=app_name
 
+    3. Install minikube on Linux Ubuntu 20.04 
+
+    Instruction link: https://minikube.sigs.k8s.io/docs/start/
+
+    curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+    
+    sudo install minikube-linux-amd64 /usr/local/bin/minikube
+
+    4. Start minikube
+
+        minikube start
+
 ### Test the app:
 * run the script ./make_prediction.sh
 
