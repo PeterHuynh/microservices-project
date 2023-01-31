@@ -3,8 +3,10 @@ from flask.logging import create_logger
 import logging
 
 import pandas as pd
-from sklearn.externals import joblib
+import joblib
+import sklearn.ensemble
 from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import GradientBoostingClassifier
 
 app = Flask(__name__)
 LOG = create_logger(app)
@@ -20,7 +22,7 @@ def scale(payload):
 
 @app.route("/")
 def home():
-    html = f"<h3>Sklearn Prediction Home</h3>"
+    html = "<h3>Sklearn Prediction Home</h3>"
     return html.format(format)
 
 @app.route("/predict", methods=['POST'])
