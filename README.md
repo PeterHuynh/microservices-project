@@ -32,5 +32,9 @@ source .devops/bin/activate
 * Create the app in Container
 * Run via kubectl
 
-### Test The App:
-    * run the script ./make_prediction.sh
+### Test the app:
+* run the script ./make_prediction.sh
+
+### To replicate/scale app:
+* run command: kubectl scale --replicas=3 rs/app_name
+ 
